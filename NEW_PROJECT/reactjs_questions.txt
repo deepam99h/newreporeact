@@ -1,0 +1,31 @@
+
+REACT INTERVIEW QUESTION
+ create table  call API with pagination , sorting 
+ What is fragment
+ code spliting
+ render
+ 
+1. solve the game puzzle.
+2. to design a form and extract the info in the form of table.
+3.What are the different `this` contexts within a browser?
+4.difference between var and let closure property,ES6 in javascript?
+5.React code test (home) - create a countdown timer animation 2 days is given?
+6.I'm asked about developing a cube design and some functionality.
+7.How to calculate profit of a certain item?
+8.javascript basic concepts like closure, setTimeout, event loop?
+9.Task given to me is create a SpaceX Rocket Launch Dashboard from dummy REST API.
+10.react question to create a circle on each click and remove bg color of circle when clicked on it.
+11.What is the difference between npm and npx?
+12.Which you will be given of an array of number and that array has another array inside it. Run function that sum all of the number inside of that array.
+13.Gave an assignment regarding creating a to-do app?
+14.How redux Saga helps make asynchronous flow easier and what role does Generators have here ?
+15.What are the ways to handle Errors in React?
+16.Edit a code to count occurrence of char in string.
+17.Create an app which uses airtable api around stocks to display in a screen and move to another screen to get details. Do crud operations, and manage state in redux. Along with that a problem to solve around stocks.
+18.Coding task -- do an contact app with React and Redux.
+19. Q1: You have an array with temperatures: [0, -5, 5, 1, 4, -3]. Return the closest temp to 0. If the array is empty: return 0. If the smallest temperature has a double in negative (3, and -3 per se), return the positive. Write this in Ruby language. Q2: You know how Redux works. We want to see your implementation of combineReducers function.
+20.How can you implement Security in React App?
+21.1) What type will return the function if an error occurs three. 2) Can be OOP applied to functional language
+ 3) What difference are between props and state in React? 4) How many threads are in JavaScript? 5) What is redux and its main parts. 
+ 6) Describe SOLID 7) What is a difference between let, var and const 8) Describe what is a HOC 9) When do we use rebase in git
+22.what is the difference between call by reference and call by parameter.

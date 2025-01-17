@@ -1,0 +1,472 @@
+<!------------------------------- HOW TO FIND DUPLICATE ELEMENT IN ARRAY ------------------------------------------>
+
+<script>
+  //METHOD 1
+
+  //   const duplicateNum = arr.filter(
+  //     (elem, index, arr) => arr.indexOf(elem) !== index
+  //   );
+
+  //METHOD 2
+  // const duplicateNum = (arr) => {
+  //   let sortedArr = arr.slice().sort();
+  //   let result = [];
+  //   for (let i = 0; i < sortedArr.lenth - 1; i++) {
+  //     if (sortedArr[i + 1] === sortedArr[i]) {
+  //       result.push(sortedArr[i]);
+  //     }
+  //   }
+  //   return result;
+  // };
+  // let array = [1, 2, 3, 2, 4, 5, 4];
+  // console.log(
+  //   ` rhe duplicate number in array ${array} is ${duplicateNum(array)}`
+  // );
+
+  //METHOD 3
+// const arr = [1,2,33,2,1,7,8];
+// const arr2 = [];
+// for(let i = 0 ; i< arr.length;i++){
+//   for(let j = 0 ; j<arr.length ; j++){
+//     if(i === j){
+//       continue
+//     }else{
+//       arr[i] === arr[i+1]
+//     }
+//     arr2.push(arr[i])
+//   }
+  
+// }
+//   console.log(arr2)
+
+//-----------HOW TO FIND MIN AND MAX NUMBER OF ARRAY IN JAVASCRIPT ------------------------------
+
+//#REDUCE METHOD----------
+
+// const arr = [23,1,4,56,22];
+// const maxNum = () => {
+//   return arr.reduce(function(prev,curr) {
+//     return prev > curr ? prev : curr
+//   })
+// }
+// console.log(maxNum(arr))
+
+//NORMAL METHOD----------------
+
+// var max = arr[0];
+// for(let i = 1 ; i<arr.length ; i++){
+//   if(arr[i]> max){
+//     max = arr[i];
+//   }
+// }
+// console.log(max)
+
+
+
+//---------------------------HOW TO FIND SECOND LARGST VALUE IN GIVEN ARRAY IN JAVASCRIPT------------------------
+// step 1-find largest/max value
+// steep-2 - Find index of largest num
+//step-3 - remove first largest num
+//stp-4 - find max num of arr
+
+// const arr = [23,1,4,56,22];
+
+// const findSecondLargest = (arr) => {
+
+//   const largestVal = Math.max(...arr);
+//   index = arr.indexOf(largestVal);
+//   arr.splice(index,1);
+//   const secondLargst = Math.max(...arr);
+
+//   console.log(secondLargst)
+// }
+// findSecondLargest(arr)
+
+// const arr = [1,2,4,5,6]
+
+// for( let i=0; i<arr.length ; i++){
+//   if(arr[i] !== i + 1){
+//  console.log(i)
+//   }
+
+// }
+//-----------------HOW TO FIND SECOND LARGEST VALUE IN ARRAY----------------------------- 
+
+
+// const arr = [12,3,23,45];
+
+
+//     const maxval = arr.reduce((prev,curr) => {
+//         return prev>curr ? prev : curr
+//     })
+    
+//     const index = arr.indexOf(maxval);
+//     arr.splice(index,1);
+    
+//      const secmaxval = arr.reduce((prev,curr) => {
+//         return prev>curr ? prev : curr
+//     })
+    
+//     console.log(secmaxval);
+	
+	
+	//-----------------METHOD FILTER AND FIND-------------------------------------------------------------------
+	
+	
+	// const arr = [12,3,23,45];
+
+
+    // const val = arr.filter((item) => item > 10);
+    //  const val = arr.find((item) => item > 10);
+    // console.log(val)
+	
+	
+	//---------------------------FIND MISSING ELEMENT OF ARRAY -------------------------------------------------
+	
+	//const arr = [1,2,4,5];
+
+//var dep = [];
+
+// for(let i =arr[0]; i<=arr[arr.length-1] ;i++ ){
+//     if(arr.indexOf(i)<0){
+//         dep.push(i)
+//     }
+// }
+// console.log(dep)
+
+//--------------------------------------EVEN AND ODD NUM OF ARRAY------------------------------------------
+// const arr = [23,42,56,10,2];
+// let evennum = [];
+// let oddnum =[];
+// for(let i = 0 ; i<arr.length ; i++){
+//     if(arr[i]%2 == 0){
+//         evennum.push(arr[i]);
+//     }else {
+//         oddnum.push(arr[i])
+//     }
+// }
+
+
+// const arr = [23,42,56,10,2];
+
+// const evennum = arr.filter((item) => item%2 == 0)
+    
+// console.log(evennum)
+// console.log(evennum,oddnum)
+
+
+//-------------------------------------SUM OF ELEMENT IN ARRAY----------------------------
+
+// const arr = [1,2,1,3];
+// let sum = 0;
+// for(let i = 0 ; i<arr.length ; i++){
+//     sum = arr[i] + sum;
+    
+    
+// }
+
+//  const sum = arr.reduce((prv,curr) => {
+//      return prv + curr
+//  }
+//  )
+// console.log(sum)
+
+//--------------------------------------HOW TO FIND FACTORIAL OF NUM------------------------- 
+
+// const arr = [1,2,1,3];
+
+// const val = 5;
+// let newval =1;
+// for(let i = 5 ; i>=1  ; i-- ){
+//     newval = i*newval;
+// }
+
+// console.log(newval)
+
+
+//------------------------------FIND PRIME NUMBER ----------------------------------------------------
+
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+// // console.log("Try programiz.pro");
+
+
+// let num =9;
+// let count  = 0;
+// for(let i =2 ; i<num ; i++){
+//     if(num % i == 0){
+//         count++;
+//         // console.log("num is not prim num")
+//     }else{
+//         // console.log("num is prime")
+//     }
+// }
+
+// if(count >= 1){
+//     console.log(" not prime")
+// }else{
+//     console.log(" prime")
+// }
+
+//-----------------------------------NUMBER OF VOWEL IN STRING -----------------------------------------------------------------------------
+// var name ="deepam"
+// name = name.toLocaleLowerCase()
+// if(name == "a" || name == "e" || name == "i" || name == "o" ){
+//     console.log(`name is vowel`)
+// }else{
+//     console.log("name is consonant")
+// }
+
+//METHOD 2
+// let arr = ['a','e','i','o','u']
+// let count = 0;
+// for(let i of name.toLocaleLowerCase()){
+//     if(arr.includes(i)){
+//         count++
+//     }
+   
+// }
+
+// console.log(count)
+
+//--------------------------------STRING REVERSE -------------------------------------------------------
+
+// var name ="deepam"
+// let rev = ""
+// for(let i = name.length-1 ; i>=0 ; i--){
+//     rev = rev + name[i]
+// }
+
+// console.log(rev)
+
+// ----------------------duplicste element in an array-----------------------------------------
+// let arr= [2,3,33,3,2,22,22]
+//   let aar2 = arr.filter((el,index,arr)=>arr.indexOf(el)!=index)
+//   console.log(aar2)
+//    let arr3=[]
+
+//    for(let i =0; i<arr.length;i++)
+//    {
+//        for(let j =0;j<arr.length;j++)
+//        {
+//             if(i===j)
+//             {
+//                continue;
+//           }
+//           else if(arr[i] ==arr[j]){
+//               arr3.push(arr[i])
+//           }
+//        }
+      
+//    }
+   
+//    console.log([... new Set(arr3)])
+   
+   
+   
+   
+   // --------------------- find min and max  in an array-----------------------------------
+   
+//    let arr= [2,3,33,23 ,23]
+//  let arr2 = arr.reduce((acc, nxt)=>{
+//      return  acc>nxt?acc:nxt
+//  })
+//  console.log(arr2)
+
+//  let maxno 
+//    for(let i =0; i<arr.length;i++)
+//    {
+//       if(arr[i]<arr[i+1])
+//       {
+//           maxno =arr[i+1]
+//       }
+//       else if(arr[i]>arr[i+1]){
+//           maxno =arr[i]
+//       }
+      
+//    }
+   
+//    console.log(maxno)
+   
+   
+   
+  //  ------------------------------------------Palindrome-----------------------------------------
+  
+//   var text ="maa"
+// let palindrome =""
+// for(let i =text.length-1;i >=0;i--)
+// {
+//   palindrome =palindrome+text[i]
+// }
+
+// if(palindrome==text)
+// {
+//   console.log("palindrome")
+// }
+// else{
+
+//   console.log("not a palindrome")
+// }
+
+
+
+///------------------------------------ swap a number------------------------
+
+
+// var num1 =2
+// let num2 =3
+// num1 = num1+num2
+// num2=num1-num2
+// num1=num1-num2
+// console.log(num2)
+// console.log(num1)
+
+
+
+
+//---------------------------------- merged two array-------------------------------
+
+// const arr1 =[1,2,3]
+// const arr2 =[4,5,6]
+// const arr3= [...arr1,...arr2]
+// const arr3 =arr1.concat(...arr2)
+
+// console.log(arr3)
+
+
+
+//------------------------------------------- factors of a given integer------------------------------
+
+// const num =15
+// let arr =[]
+// for(let i= 1;i <num;i++){
+//   if(num%i==0)
+//   {
+// arr.push(i)
+//   }
+// }
+// console.log(arr)
+
+
+
+
+//----------------------------------- array are equal---------------------------------------
+
+// let arr1 = [1, 2, 3];
+// let arr2 = [2, 1, 3];
+// if (arr1.length != arr2.length) {
+//   console.log('arrays are not equal');
+// } else {
+//   let sameArray = arr1.every(ele => {
+//     if (arr2.indexOf(ele) > -1) {
+//       return (ele = [arr2.indexOf(ele)]);
+//     }
+//   });
+//   console.log(sameArray);
+// }
+
+
+// ----------------------------------------------intersection and union ------------------------
+
+//UNION
+// let arr1 = [1, 2, 4,4];
+// let arr2 = [2, 4, 6];
+//let arr3 =arr1.concat(arr2)
+// console.log([...new Set(arr3)])
+// let arr3 =arr1.filter((el)=>{
+//   return arr2.includes(el)
+// })
+
+// console.log([...new Set(arr3)])
+
+
+
+
+
+
+/// -----------------------INTRSECTION------------------------
+
+
+// let name = "sweta"
+// let first =""
+// let firstLetter = name.split([])
+// first=firstLetter[0]
+// console.log(firstLetter[0])
+// console.log(first.toUpperCase())
+// console.log(firstLetter.shift())
+
+// let newarr =firstLetter
+// newarr.unshift(first.toUpperCase())
+// console.log(newarr)
+// let converted =""
+// for(let i in newarr)
+// {
+//   converted=converted+newarr[i]
+// }
+// console.log(converted)
+
+
+//--------------------FIND FIBONACCI SERIES ON A GIVEN NUMBER ---------------------------
+
+//find fibonacci sequence
+// let a = 0;
+// let b = 1;
+// var temp;
+// for(let i = 0 ; i<=9 ; i++){
+//  temp = a + b; 
+//  a =  b; 
+//  b = temp;
+
+//   console.log(a,b)
+
+// }
+
+//------------------------------CHECK THE SERIES IS FIBONACCI OR NOT-----------------------------------------
+
+// let arr = [0,1,1,2,3,5,8]
+// var sum  = false
+// for(let  i = 0; i<arr.length-2 ; i++){
+//  if(arr[i+2] == arr[i] + arr[i+1]){
+//      sum = true
+//  }else{
+//      sum = false
+//  }
+// }
+// if(sum){
+//     console.log("fibonacci")
+// }else{
+//     console.log("no")
+// }
+
+//-------------------------star pattern----------------------------------
+
+// for(let i = 1 ; i<= 5 ; i++){
+//    for(let j = 1 ;j<= i ; j++){
+//       document.write("*")
+//    }
+//  document.write("<br>")
+// }
+ //-----------------------HOW TO FIND NO OF OCCURENCE OF CHAR OF STRING-----------------------------------
+
+//  const name = "deepam";
+// let count = 0;
+// for(let i = 0 ; i<name.length ; i++){
+//     if(name[i] == "e"){
+//         count++;
+//     }
+// }
+// console.log(count)
+
+//HOW TO FIND TABLE OF ANY NUMBER
+
+// for(let i = 1 ; i<= 10 ; i++){
+//     console.log("2" + "*" + i + "="  + 2*i)
+// }
+
+
+
+
+
+
+</script>

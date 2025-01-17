@@ -1,0 +1,74 @@
+<script>
+//CREATION OF OBJECT 
+const user = {};
+const member = new Object();
+
+//ADDING PROPERTY IN OBJ
+
+// user.name = "sweta";
+// member.roll = "45";
+let key = "address";
+
+//SHORT HAND PROPERTY IN OBJECT
+
+let email = "swetakarn@477gmail.com";
+const newUser = {
+    name:"sweta",
+    age:27,
+    isMarried:false,
+    getData:function(){
+        return this.city
+    },
+    innner:{
+        name:"gulchi"
+    },
+    ["district"]:"madhubani",
+    [key]:'noida , up , india',
+    email
+}
+
+
+//DELETE OBJ ITEM
+
+delete newUser.age
+newUser.city = "patna"
+
+//ADDING 
+newUser["pin code"] = "847235"
+//CHECK ITEM OF OBJECT EXIST OR NOT 
+
+console.log("new" in newUser)
+
+
+//-----------------------------------LOOP TO PRINT ALL ITEMS OF OBJECT
+
+for(item in newUser){
+    console.log(`${item} : ${newUser[item]}`)
+}
+console.log(newUser);
+console.log(member)
+
+//---------------------------------SUM OF ALL ITMS VALUES IN OBJECT
+
+const emp = {
+    sweta:100,
+    aditi:200,
+    nisha:500,
+}
+// let sum = 0;
+// for(item in emp){
+// sum += emp[item]
+// }
+// console.log(sum)
+
+multiplybytwo(emp)
+const multiplybytwo = (emp) => {
+    for(item in emp){
+        if(typeof emp[item] === "number"){
+            emp[item] = emp[item]*2;
+        }
+        
+    }
+}
+console.log(emp)
+</script>

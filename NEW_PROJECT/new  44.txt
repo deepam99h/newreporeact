@@ -1,0 +1,40 @@
+Javascript runs synchroneous function first then it runs aynchroneous function
+
+console.log("start")
+const newFuc = new Promise((resolve,reject) => {
+    console.log(1)
+    resolve("2")
+})
+
+newFunc.then((res) => {
+    console.log(res)
+})
+
+
+EXPORT 
+if we are creating a react function using default export than we can call it by any name but if we are only using export than we have to call it by its specific name.
+
+
+function abcd (){
+}
+export default abcd;
+import anyname from ./path
+
+import {abcd} from "./path"
+export function abcd (){
+<></>
+}
+
+
+NOTE2-
+
+we can also create elements in react using react.createElement 
+ex- react.creatElement("h1",null,"sweta")
+
+
+NOTE3
+
+always set the State by using previous value but not current value.
+
+setState((prevState) => prevState+1)
+

@@ -1,0 +1,114 @@
+<script>
+//***********************-----STRING----------************************************
+
+//HOW TO FIND VOWELS FROM STRING
+
+// const name = "sweta";
+// let arr = name.split("");
+// let count = 0;
+// console.log(arr)
+// for(let i = 0 ; i<arr.length ; i++){
+//     if(arr[i] == "a" ||  arr[i] == "e" || arr[i] == "i" || arr[i] == "o" || arr[i] == "u"){
+//     count++
+// }
+// }
+// if(count > 0){
+//     console.log(` number odf vowels in your string are : ${count}`)
+// }
+
+//------------------------HOW TO REVERSE A STRING IN JAVASCRIPT------------------
+
+//  function abc(str){
+//     let arr2 = [];
+//     const strToarr = str.split("");
+//     for(let i = strToarr.length-1 ; i>=0;i--){
+//          arr2.push(strToarr[i])
+//     }
+//     const revStr = arr2.join("")
+   
+//     return revStr
+
+//  }
+//  console.log(abc("sweta"))
+
+
+
+//------------------------------------HOW TO FIND A STRING IS PALLINDROM OR NOT----------------
+
+//  function abc(str){
+//     let arr2 = [];
+//     const strToarr = str.split("");
+//     for(let i = strToarr.length-1 ; i>=0;i--){
+//          arr2.push(strToarr[i])
+//     }
+//     const revStr = arr2.join("")
+   
+//     if(str == revStr){
+//     console.log("pallindrom")
+//  }else{
+//     console.log(" not pallindrom")
+//  }
+//  }
+
+//  console.log(abc("ata"))
+
+//METHOD 2
+
+// function palindromFun(str) {
+// str = str.toLowerCase();
+// const reversedStr = str.split("").reverse().join("");
+// if (reversedStr === str) {
+// return true;
+// } else {
+// return false;
+// }
+// }
+// console.log(palindromFun("sweta"));
+
+
+//--------------------------HOW TO SWAP A VARIBLE WITH AND WITHOUT USING THIRD VARIABLE ---------------------------------
+// var a =2;
+// var b = 3;
+//METHOD1
+// var temp = a;
+
+// a= b;
+// b=temp;
+// console.log(a,b)
+
+//METHOD2
+
+// [a,b] = [b,a]
+// console.log(a,b)
+
+//----------------------HOW TO CONVERT FIRST LETTER OF STRING IN UPPERCASE------------------------------------
+
+// function abc(str){
+//     var splitStr = str.split(" ");
+//     var convertArr = splitStr.map((item) => {
+//     return  item.charAt(0).toUpperCase() +item.slice(1)
+//     })
+//     return;
+// };
+
+// console.log(abc("sweta"));
+
+//------------------PROGRAM TO FIND NUMBER OF OCCURENCE OF CHARACTER IN STRING-------------------------------------
+
+
+// const findStrChar = (str , lettr) => {
+// let count = 0;
+//     const strLen = str.length;
+//     for(let i = 0 ; i<strLen ; i++){
+//         if(str[i] === lettr){
+//               count++
+//         }
+//     }
+//     return count ;
+
+// }
+// console.log(findStrChar("swetaa" , "a"))
+
+
+
+</script>

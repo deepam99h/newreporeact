@@ -1,0 +1,304 @@
+
+
+<script>
+    //********************------------------ARRAY-------------------------****************************
+//-------------------------------------------HOW TO FIND DUPLICATE ELEMENT IN ARRAY------------------
+
+
+//METHOD 1
+// const findDuplicate = arr.filter((item,index,arr) => arr.indexOf(item) !== index)
+
+//METHOD 2
+
+// const arr = [1,2,33,2,1,7,7,8];
+// const arr2 = [];
+// for(let i = 0 ; i< arr.length;i++){
+//   for(let j =  i +1; j<arr.length ; j++){
+//     if(arr[i] === arr[j] && !arr2.includes(arr[i])){
+//         arr2.push(arr[i])
+      
+//     }
+  
+//   }
+  
+// }
+//   console.log(arr2)
+
+//----------------------------HOW TO FIND MIN AND MAX OF THE GIVEN ARRAY------------------------------------
+
+//METHOD1------------------------------------------------------------
+// const arr = [12, 34, 1 ,38];
+
+// const maxNum = arr.reduce(function(prev,curr){
+//     return prev >curr ? prev : curr
+// })
+
+
+// const minNum = arr.reduce(function(prev,curr) {
+//     return prev>curr ? curr : prev
+// })
+// console.log(minNum)
+
+// METHOD2 ------------------------------------
+// var max = arr[0];
+// for( i = 1 ; i<arr.length ; i++){
+//     if(arr[i] > max){
+//         max=arr[i]
+//     }
+// }
+// console.log(max)
+
+//------------------------------------HOW TO FIND SECOND LARGEST VALUE IN THE GIVEN ARRAY-------------------------------
+// const arr = [12,1,45,34,7]
+// const maxNum  = arr.reduce(function(prev,curr) {
+//     return prev > curr ? prev : curr
+// })
+// console.log(maxNum)
+// const indexofmaxnum =  arr.indexOf(maxNum)
+
+//SPLICE METHOD IS USED TO DELETE SOME SPECIFIC ELEMENT OF ARRAY WHICH ACCEPT INDEX VALUE AND SECOND PARAMETER AS COUNT OF NUMBER THAT NEEDS TO DELETE 
+// const deleteFirstLargestValue = arr.splice(indexofmaxnum,1);
+
+// const maxNum2  = arr.reduce(function(prev,curr) {
+//     return prev > curr ? prev : curr
+// })
+// console.log(maxNum2)
+
+
+//----------------HOW TO FIND MISSING VALUE OF GIVEN ARRAY--------------------------------------------------
+
+// const arr  = [1,2,3,5,6,7];
+// function missingElem(arr){
+//     let lengthArr = arr.length + 1;
+//     for(let i = 1 ; i<lengthArr ; i++){
+//         if(!arr.includes(i)){
+//             return i
+//         }
+
+// }
+// return lengthArr
+// }
+// console.log(missingElem(arr))
+
+//---------------HOW TO FIND EVEN NUMBER OF ARRAY-----------------------------------------------------------
+// const arr = [2,3,5,6,1];
+//METHOD 1
+// const evenarr = [];
+// const oddarr = [];
+
+// for(let i = 0 ; i<arr.length ; i++){
+//     if(arr[i]%2 == 0 ){
+//     evenarr.push(arr[i])
+//     }else{
+// oddarr.push(arr[i])
+//     }
+//     console.log(evenarr)
+// }
+
+//METHOD 2
+// const evenarr = arr.filter((item) => {
+//     return item % 2 === 0
+// })
+// console.log(evenarr)
+
+
+//--------------------------HOW TO FIND SUM OF ALL ELEMENTS OF ARRAY-------------------------------------------------------------
+
+// const arr = [2,3,5];
+// let sum = 0;
+
+// for(let i = 0 ; i<arr.length ; i++){
+//     sum = arr[i] + sum;
+// }
+// console.log(sum)
+//  const sum = arr.reduce((prv,curr) => {
+//      return prv + curr
+//  }
+//  )
+// console.log(sum)
+
+
+//***************************-----------NUMBERS RELATED----------------**************************
+
+//----------------------HOW TO FIND FACTORIAL OF A GIVEN NUMBER -----------------------------------------
+
+// let num = 5;
+// let start = 1;
+// for(let i = 5 ; i>=1 ; i--){
+//      start = i * start;
+
+// }
+// console.log(start)
+
+//--------------------HOW TO FIND PRIME NUMBER OF GIVEN ARRAY---------------------------------------------
+// const num = 7 ;
+// let  start= 2 ;
+// let count = 0 ;
+
+// for(let i = start ; i< num ; i++){
+//     if( num % i == 0){
+//         count++
+//     }
+// }
+// if(count < 1){
+//     console.log("prime number")
+// }else{
+//     console.log("not prime")
+// }
+
+//---------------------HOW TO EMPTY ALL THE ITEMS OF A ARRAY-------------------------
+
+// const arr= [12,23,45]
+
+// arr.length = 0
+// console.log(arr)
+
+// arr.splice(0,arr.length)
+// console.log(arr)
+
+
+//-------------------------HOW TO MERGE 2 ARRAYS IN JAVASCRIPT----------------------------------------
+
+// const arr = [1,3,2,1];
+// const arr2 = [4,5,1,];
+// // const newarr = arr.concat(arr2);
+// const newarr = [...arr,...arr2];
+
+// const sortedArr = newarr.sort(function(a,b){
+//     return a - b;
+// })
+// console.log(sortedArr)
+
+//--------------------------------HOW TO FIND THE FACTORS OF AN INTEGER--------------------------------
+
+//  function abc(num){
+//     for(let i = 0 ; i<=num; i++){
+//         if(num%i == 0){
+//             console.log(i)
+//         }
+//     }
+//  }
+//  console.log(abc(10))
+
+//---------HOW TO COMPARE TO ARRAYS ARE EQUAL OR NOT------------------------
+// const arr1 = [4,2,5,6,7];
+// const arr2 = [2,4,7,6,5];
+
+// const isArraySame = arr1.length == arr2.length && arr1.every((item) => {
+//     if(arr2.indexOf(item) > -1){
+//         return item = [arr2.indexOf(item)]
+//     }
+   
+// })
+// console.log(isArraySame)
+
+//-----------------HOW TO FIND INTERSECTION OF TWO ARRAYS IN JAVASCRIPT--------------------
+// const arr1 = [4,2,5,6,7,4,2];
+// const arr2 = [3,8,1,2,4];
+
+// const arrintersection = arr1.filter((item) => {
+//     return arr2.includes(item)
+// })
+
+// console.log(...new Set(arrintersection))
+
+////---------------------PROGRAM TO FIND FIBONACCI SERIES --------------------------------------
+
+// var a = 0 ;
+// var b = 1;
+// for(let i = 0 ; i<= 10 ; i++){
+//     var temp = a + b;
+//     a = b ;
+//     b = temp;
+//     console.log(temp)
+// }
+//----------------------------PROGRAM TO FIND TABLE OF ANY GIVEN NUMBER---------------------------------------------------
+
+// function findTable(num)  {
+//     var temp;
+//     for(let i = 1 ; i<=10 ; i++){
+//         temp = i * num ;
+//         console.log(temp)
+//     }
+    
+// // return temp
+// }
+// findTable(2)
+
+//----------PROGRAM TO CHECK ARMSTRONG NUMBER OF A NUMBER-----------------------------------
+
+// function checkArmstrongnum(num) {
+//     let sum = 0;
+//     const numLen = num.toString().length;
+//     let temp = num; // Store the original number to compare later
+
+//     while (temp > 0) {
+//         const rem = temp % 10;
+//         sum += Math.pow(rem, numLen); // Raise the digit to the power of numLen and add to sum
+//         temp = Math.floor(temp / 10); // Reduce the number
+//     }
+
+//     if (sum === num) {
+//         console.log("Armstrong");
+//     } else {
+//         console.log("Not Armstrong");
+//     }
+// }
+
+// checkArmstrongnum(153);
+
+
+
+
+//-------FIND LENGTH OF ARRAY WITHOUT USING LENGTH MENTHOD------------------------------------------------
+
+
+
+// function arrLength(arr){
+//     let length = 0;
+//     while(arr[length] !== undefined){
+//         length++;
+//     }
+//     return length;
+// }
+// const arr = [1,2,3,4];
+// console.log(arrLength(arr))
+
+//-------------CREATE NEW ARRAY AND PRINT ALL THE ELEMENT OF THE GIVEN ARRAY-----------------------------------------
+
+// const arr = new Array();
+// arr[0] = 1;
+// arr[1] = 2;
+// arr[2] = 3;
+
+// for(let i = 0 ; i<arr.length ; i++){
+//     console.log(arr[i])
+// }
+
+//----------------HOW TO REMOVE SPECIFIC ELEMENT OF ARRAY--------------------------------------------
+// function removeElm(arr,ele){
+//     const ElemIndex = arr.indexOf(ele)
+//     const newarr = arr.splice(ElemIndex,1);
+//     return arr
+
+// }
+// const arr = [12,56,89];
+// console.log(removeElm(arr,56))
+
+//METHOD 2
+// const arr = [12,56,89];
+// const value = 56
+
+// const removeElm = arr.filter((elem ) => elem != value)
+// console.log(removeElm)
+
+//--------------------------------REVERSE A STRING ARRAY----------------------------------------------
+//------------------------------INSERT A ITEM AT SECOND LAST INDEX INTO AN ARRAY----------------------
+
+// const arr = [12,34,56,2];
+// let item = 45;
+
+// const newarr = arr.splice(arr.length - 1 , 0 , item)
+// console.log(arr)
+
+</script>

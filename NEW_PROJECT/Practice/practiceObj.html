@@ -1,0 +1,61 @@
+<script>
+    // const a = {} ;
+    // const b = {key : "b"};
+    // const c ={key : "c"};
+
+    // a[b] = 123;
+    // a[c] = 345;
+
+    //It will be converted into following.
+
+    // a["[object object]"] = 123;
+    // b["[object object]"] = 345;
+
+// console.log(a[b])
+
+//----------------WHAT IS JSON.Stringify and JSON.parse-------------------------------
+
+// const obj = {
+//     name:"sweta",
+//     id:1
+// }
+//IT WILL CONVERT AN OBJECT INTO STRING
+
+// console.log(JSON.stringify(obj))
+// const strobj = JSON.stringify(obj);
+// localStorage.setItem("test",strobj)
+
+// //IT WILL CONVERT A STRING OBJ TO INTEGER OR OBJ TYPE
+
+// console.log(localStorage.getItem(JSON.parse("test")))
+
+//WWE CAN STORE A OBJECT DATA INTO OUR LOCALSTORAGE BY CONVERTING  THIS OBJECT INTO STRING
+
+//------------------------SPREAD OPERATOR WITH OBJ--------------------------
+
+// console.log([..."sweta"])
+
+// const obj = {
+//     name:"sweta",
+//     id:1
+// }
+// const obj2 = {
+//     name:"aditi",...obj
+    
+// }
+// console.log(obj2)
+
+//----------FUNCTIONS WITH ARRAY------------------
+
+// const obj = {
+//     radius:5,
+//     diameter(){
+//         return this.radius*10;
+//     },
+//     perimeter: () => 2*Math.PI * this.radius
+// }
+// console.log(obj.diameter());
+// console.log(obj.perimeter())
+
+
+</script>

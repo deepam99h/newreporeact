@@ -1,0 +1,193 @@
+OBJECT RELATED QUESTIONS
+
+const func = (function(a){
+    delete a
+    return a
+})(5)
+console.log(func)
+
+OP-5
+
+
+const newobj = {
+    age:25,
+    name:"sweta"
+}
+newobj["deepampagalhai"] = true
+newobj["deepamismad"] = "yes"
+delete newobj.deepamismad
+console.log(newobj)
+
+
+const firstname = "Deepam"
+const lastname = "Mishra"
+const newobj = {
+    [firstname]:lastname
+}
+
+
+const dev ={
+    harshal:"..",
+    shantanu:"....",
+    chetan:"good"
+}
+for(key in dev ){
+    console.log(`${key} ${dev[key]}`)
+}
+
+const obj = {
+    a:"sweta",
+    b:"bhawana",
+    a:"archana"
+}
+console.log(obj)
+
+
+console.log(newobj)
+
+const obj = {
+ a:100,
+ b:200,
+ c:"deepam"
+}
+function multiplybytwo(obj) {
+    for(key in obj){
+        if(typeof obj[key] == "number"){
+             obj[key] = 2*obj[key]
+        }
+       
+    }
+     console.log(obj)
+    
+}
+OP-
+{ a: 200, b: 400, c: 'deepam' }
+
+
+
+const a = {}
+const b = {a:"123"}
+const c = {c:"1"}
+
+a[b] = "11"
+
+console.log(a[b])
+OP-11
+
+console.log([..."sweta"])
+OP-[ 's', 'w', 'e', 't', 'a' ]
+
+
+const newobj = {
+    a:1,
+    b:2
+}
+const admin = {
+    c:true,
+    ...newobj
+}
+console.log(admin)
+
+const newobj = {
+    newname:"deepam",
+    a:"1",
+    b:2
+}
+
+const oldobj = JSON.stringify(newobj,["a","b"])
+console.log(oldobj)
+
+//THIS KEYWORD -27 NOV-24
+
+const obj = {
+    name:"sweta",
+    age:23,
+    abc:function getname(){
+        console.log(this.name)
+    }
+}
+const obj = {
+    name:"sweta",
+    age:23,
+    abc: getname = () =>{
+        console.log(this.name)
+    }
+}
+obj.abc()
+
+
+
+
+
+const obj = {
+    name:"sweta",
+    age:23,
+    getAbc:{
+        newname:"amit",
+        getnewname:function getname(){
+            console.log(this.name , this.newname)
+        }
+    }
+   
+}
+obj.getAbc.getnewname()
+
+const obj = {
+    name:"sweta",
+    age:23,
+    getAbc(){
+        const getnewname = () => console.log(this.name)
+        getnewname()
+    }
+   
+}
+obj.getAbc()
+
+class newclassname{
+    constructor(n){
+       this.n = n
+    }
+     getname(){
+        console.log(this.n)
+    }
+}
+const abc = new newclassname("deepam")
+abc.getname()
+
+ const obj = {
+    name:"sweta",
+   
+    abc: function getname(){
+      const name="sweta karn"
+      console.log(this.name)
+    }
+}
+obj.abc()
+
+//  function getname(){
+//       return {
+//           name:"sweta",
+//           ref:this
+//       }
+//     }
+ function getname(){
+      return {
+          name:"sweta",
+          ref (){
+              return this
+          }
+      }
+    }
+const name = getname()
+console.log(name.ref().name)
+
+let accessvar = {
+     newfunc () {
+        this.a = 5
+    },
+     accessa (){
+        return this.a
+    }
+}
+accessvar.newfunc()
+console.log(accessvar.accessa())
